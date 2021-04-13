@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!DOCTYPE banco_lorca SYSTEM "banco_lorca.dtd">
+
+<banco_lorca>
+
+	<clientes>
+		
+		<cliente nif="_5896587M">
+			<prestamo num_prestamo="_2457"/>
+			<cuenta cod_cuenta="_11" permiso="titular"/>
+			<cuenta cod_cuenta="_22" permiso="autorizado"/>
+
+		</cliente>
+
+		<cliente nif="_5898747M">
+			<cuenta cod_cuenta="_11" permiso="autorizado"/>
+
+		</cliente>
+
+		<cliente nif="_5894717M">
+			<cuenta cod_cuenta="_11" permiso="autorizado"/>
+			<prestamo num_prestamo="_2214"/>
+
+		</cliente>
+
+	</clientes>
+
+	<sucursales>
+
+		<sucursal cod_sucursal="_1">
+			
+			<cuenta_corriente cod_cuenta="_11">
+				<domiciliacion num="_2256"/>
+			</cuenta_corriente>
+
+		</sucursal>
+
+		<sucursal cod_sucursal="_2">
+			
+			<cuenta_corriente cod_cuenta="_22">
+			</cuenta_corriente>
+
+		</sucursal>
+
+	</sucursales>
+
+
+</banco_lorca>

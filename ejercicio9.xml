@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE Pedido [
+<!ELEMENT Pedido (Destino, Ordenante, Observaciones, Contenido)>
+<!ATTLIST Pedido fecha CDATA #REQUIRED>
+<!ELEMENT Destino (Nombre, Direccion, Ciudad, CodPostal)>
+<!ELEMENT Ordenante (Nombre, Direccion, Ciudad, CodPostal)>
+<!ELEMENT Nombre (#PCDATA)>
+<!ELEMENT Direccion (#PCDATA)>
+<!ELEMENT Ciudad (#PCDATA)>
+<!ELEMENT CodPostal (#PCDATA)>
+<!ELEMENT Observaciones (#PCDATA)>
+<!ELEMENT Contenido (Producto+)>
+<!ELEMENT Producto (Nombre, Cantidad, Precio)>
+<!ATTLIST Producto cod CDATA #REQUIRED>
+<!ELEMENT Cantidad (#PCDATA)>
+<!ELEMENT Precio (#PCDATA)>
+]>
+
+<Pedido fecha="20/10/99">
+	<Destino>
+		<Nombre>Alicia Abad</Nombre>
+		<Direccion>Plaza de la Duquesa 12</Direccion>
+		<Ciudad>Albacete</Ciudad>
+		<CodPostal>05020</CodPostal>
+	</Destino>
+
+	<Ordenante>
+		<Nombre>Roberto Movilla</Nombre>
+		<Direccion>General Ricardos 56</Direccion>
+		<Ciudad>Madrid</Ciudad>
+		<CodPostal>28055</CodPostal>
+	</Ordenante>
+
+	<Observaciones>
+		Es urgente, por favor, el césped está muy alto
+	</Observaciones>
+
+	<Contenido>
+		<Producto cod="872-AA">
+			<Nombre>Cortadora de cesped</Nombre>
+			<Cantidad>1</Cantidad>
+			<Precio>148.95</Precio>
+		</Producto>
+
+		<Producto cod="926-FH">
+			<Nombre>Podadora para setos</Nombre>
+			<Cantidad>3</Cantidad>
+			<Precio>7.98</Precio>
+		</Producto>
+	</Contenido>
+</Pedido>

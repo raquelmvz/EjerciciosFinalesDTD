@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!DOCTYPE motorsol SYSTEM "motorsol.dtd">
+
+<motorsol>
+
+	<motores>
+		<motor id="m1" responsable="_27111111F" piezas="p1 p4">
+			<trabajador cod="_27111111F"/>
+			<trabajador cod="_27111112F" familiares="_27111113F _27111114F"/>
+		</motor>
+
+		<motor id="m2" responsable="_27111112F" piezas="p3">
+			<trabajador cod="_27111111F"/>
+			<trabajador cod="_27111112F" familiares="_27111113F"/>
+		</motor>
+
+		<motor id="m3" responsable="_27111114F" piezas="p2">
+			<trabajador cod="_27111114F"/>
+			<trabajador cod="_27111115F" familiares="_27111116F"/>
+		</motor>
+	</motores>
+
+	<piezas>
+		<pieza id="p1" compuesta="p2 p3"/> <!-- esto son referencias-->
+		<pieza id="p2"/>
+		<pieza id="p3"/>
+		<pieza id="p4"/>
+	</piezas>
+
+	<secciones>
+		<seccion cod="s1">
+			<realiza motor="m1"/>
+			<realiza motor="m2"/>
+		</seccion>
+
+		<seccion cod="s2">
+			<realiza motor="m3"/>
+		</seccion>
+	</secciones>
+
+	<empleados>
+		<empleado nif="_27111111F"/>
+		<empleado nif="_27111112F"/>
+		<empleado nif="_27111113F"/>
+		<empleado nif="_27111114F"/>
+		<empleado nif="_27111115F"/>
+		<empleado nif="_27111116F"/>
+	</empleados>
+
+</motorsol>

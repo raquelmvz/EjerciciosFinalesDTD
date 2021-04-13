@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!DOCTYPE Libro [
+<!ELEMENT Libro (Titulo, Contenido, Copyright)>
+<!ATTLIST Libro id CDATA #REQUIRED>
+<!ELEMENT Titulo (#PCDATA)>
+<!ELEMENT Contenido (Capitulo, Separacion?)+>
+<!ELEMENT Capitulo (Tema, Seccion+)>
+<!ATTLIST Capitulo materia CDATA #IMPLIED>
+<!ELEMENT Tema (#PCDATA)>
+<!ELEMENT Seccion (#PCDATA)>
+<!ATTLIST Seccion apartados CDATA #REQUIRED dificil CDATA #IMPLIED>
+<!ELEMENT Separacion EMPTY>
+<!ELEMENT Copyright (#PCDATA)>
+]>
+
+<Libro id="123">
+
+	<Titulo>Calculo</Titulo>
+
+	<Contenido>
+		
+		<Capitulo materia="series">
+			
+			<Tema>Criterios de convergencia</Tema>
+
+			<Seccion apartados="3" dificil="si"></Seccion>
+
+
+		</Capitulo>
+
+		<Separacion/>
+
+
+		<Capitulo>
+			
+			<Tema>Integrales multiples</Tema>
+
+			<Seccion apartados="7"></Seccion>
+
+
+		</Capitulo>
+
+		<Separacion/>
+
+	</Contenido>
+
+
+	<Copyright>Todos los derechos reservados al autor</Copyright>
+
+</Libro>
+

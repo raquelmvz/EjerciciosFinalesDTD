@@ -1,0 +1,19 @@
+<!ELEMENT banco_lorca ((clientes, sucursales)|(sucursales,clientes))>
+<!ELEMENT clientes (cliente+)>
+<!ELEMENT sucursales (sucursal+)>
+<!ATTLIST cliente nif ID #REQUIRED>
+<!ELEMENT cliente (prestamo | cuenta)*>
+<!ELEMENT prestamo EMPTY>
+<!ELEMENT cuenta EMPTY>
+<!ATTLIST prestamo num_prestamo ID #REQUIRED>
+<!ATTLIST cuenta 
+	cod_cuenta IDREF #REQUIRED 
+	permiso (titular|autorizado) #REQUIRED>
+<!ELEMENT sucursal (cuenta_corriente)>
+<!ATTLIST sucursal cod_sucursal ID #REQUIRED>
+<!ELEMENT cuenta_corriente (domiciliacion?)>
+<!ATTLIST cuenta_corriente cod_cuenta ID #REQUIRED>
+<!ATTLIST domiciliacion num ID #REQUIRED>
+<!ELEMENT domiciliacion EMPTY>
+
+
